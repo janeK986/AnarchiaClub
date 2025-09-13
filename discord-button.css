@@ -1,0 +1,97 @@
+.light-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90px;
+}
+
+.light-button button.bt {
+  position: relative;
+  height: 35px; /* zmniejszone */
+  display: flex;
+  align-items: flex-end;
+  outline: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.light-button button.bt .button-holder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 35px;   /* zmniejszone */
+  width: 35px;    /* zmniejszone */
+  background-color: #0a0a0a;
+  border-radius: 5px;
+  color: #0f0f0f;
+  font-weight: 700;
+  transition: 300ms;
+  outline: #0f0f0f 2px solid;
+  outline-offset: 2px;
+  padding: 0 6px;
+}
+
+.light-button button.bt .button-holder svg {
+  height: 16px; /* zmniejszone */
+  width: 16px;
+  fill: #0f0f0f;
+  transition: 300ms;
+}
+
+.light-button button.bt .button-holder p {
+  font-size: 10px; /* zmniejszone */
+  margin: 0;
+  margin-top: 2px;
+}
+
+.light-button button.bt .light-holder {
+  position: absolute;
+  height: 40px;  /* zmniejszone */
+  width: 28px;   /* zmniejszone */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+}
+
+.light-button button.bt .light-holder .dot {
+  position: absolute;
+  top: 0;
+  width: 5px;   /* zmniejszone */
+  height: 5px;  /* zmniejszone */
+  background-color: #0a0a0a;
+  border-radius: 5px;
+  z-index: 2;
+}
+
+.light-button button.bt .light-holder .light {
+  position: absolute;
+  top: 0;
+  width: 40px;   /* zmniejszone */
+  height: 40px;  /* zmniejszone */
+  clip-path: polygon(50% 0%, 25% 100%, 75% 100%);
+  background: transparent;
+}
+
+.light-button button.bt:hover .button-holder svg {
+  fill: rgba(88, 101, 242, 1);
+}
+
+.light-button button.bt:hover .button-holder {
+  color: rgba(88, 101, 242, 1);
+  outline: rgba(88, 101, 242, 1) 2px solid;
+  outline-offset: 2px;
+}
+
+.light-button button.bt:hover .light-holder .light {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(88, 101, 242, 1) 0%,
+    rgba(255, 255, 255, 0) 75%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
